@@ -22,3 +22,19 @@ window.addEventListener('scroll', function () {
 gsap.from(".hero-content", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
 gsap.from(".stat", { opacity: 0, y: 50, duration: 1, stagger: 0.2, scrollTrigger: ".stats-grid" });
 gsap.from(".startup-card", { opacity: 0, y: 50, duration: 1, stagger: 0.2, scrollTrigger: ".startup-grid" });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('#navbar .menu-icon');
+    const navbarUl = document.querySelector('#navbar ul');
+    const navLinks = document.querySelectorAll('#navbar ul li a');
+
+    menuIcon.addEventListener('click', function () {
+        navbarUl.classList.toggle('show');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navbarUl.classList.remove('show');
+        });
+    });
+});
