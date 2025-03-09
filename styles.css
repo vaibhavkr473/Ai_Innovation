@@ -354,21 +354,15 @@ footer {
 
 /* Footer Bottom */
 .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-}
-
-.footer-bottom p {
-    margin: 0;
-    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .back-to-top {
     display: inline-block;
     margin-top: 10px;
-    color: #ff5722; /* Orange accent */
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -376,4 +370,9 @@ footer {
 
 .back-to-top:hover {
     color: #e64a19; /* Darker orange on hover */
+}
+
+span {
+    flex: 1;
+    text-align: center;
 }
